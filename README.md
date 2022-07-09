@@ -19,7 +19,11 @@ Coming soon!
 
 ### Setup
 
-Comming soon!
+- clone [repo](https://github.com/memelopez/math-magicians)
+- run `npm i` in command line 
+- once installing is done, run `npm start` in command line 
+
+> this should show the calculator in the browser ready for calculations! 
 
 
 ## Author
