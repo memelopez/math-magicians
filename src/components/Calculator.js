@@ -1,6 +1,6 @@
 // /src/components/Calculator.js
 
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 import calculate from './logic/calculate';
@@ -24,126 +24,117 @@ Output.propTypes = {
   result: PropTypes.string,
 };
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-    this.state = {
-      total: null,
-      next: null,
-      operation: null,
-    };
-  }
+const Calculator = () => {
+  const [state, setState] = useState({ total: null, next: null, operation: null });
 
-  handleClick(value) {
-    const { total, next, operation } = this.state;
+  const handleClick = (value) => {
+    const { total, next, operation } = state;
     const calcObj = {
       total,
       next,
       operation,
     };
     const newCalcObj = calculate(calcObj, value);
-    this.setState({
+    setState({
       total: newCalcObj.total,
       next: newCalcObj.next,
       operation: newCalcObj.operation,
     });
+  };
+
+  const { total, next } = state;
+  let disp = '';
+  if (next !== null && total === null) {
+    disp = next;
+  } else if (total !== null && next !== null) {
+    disp = next;
+  } else if (next === null && total !== null) {
+    disp = total;
   }
 
-  render() {
-    const { total, next } = this.state;
-    let disp = '';
-    if (next !== null && total === null) {
-      disp = next;
-    } else if (total !== null && next !== null) {
-      disp = next;
-    } else if (next === null && total !== null) {
-      disp = total;
-    }
-    return (
-      <div className="calcContainer">
-        <Output result={disp} />
-        <div className="keysGrid">
-          <Button
-            value="AC"
-            handleClick={this.handleClick}
-          />
-          <Button
-            value="+/-"
-            handleClick={this.handleClick}
-          />
-          <Button
-            value="%"
-            handleClick={this.handleClick}
-          />
-          <Button
-            value="÷"
-            handleClick={this.handleClick}
-          />
-          <Button
-            value="7"
-            handleClick={this.handleClick}
-          />
-          <Button
-            value="8"
-            handleClick={this.handleClick}
-          />
-          <Button
-            value="9"
-            handleClick={this.handleClick}
-          />
-          <Button
-            value="x"
-            handleClick={this.handleClick}
-          />
-          <Button
-            value="4"
-            handleClick={this.handleClick}
-          />
-          <Button
-            value="5"
-            handleClick={this.handleClick}
-          />
-          <Button
-            value="6"
-            handleClick={this.handleClick}
-          />
-          <Button
-            value="-"
-            handleClick={this.handleClick}
-          />
-          <Button
-            value="1"
-            handleClick={this.handleClick}
-          />
-          <Button
-            value="2"
-            handleClick={this.handleClick}
-          />
-          <Button
-            value="3"
-            handleClick={this.handleClick}
-          />
-          <Button
-            value="+"
-            handleClick={this.handleClick}
-          />
-          <Button
-            value="0"
-            handleClick={this.handleClick}
-          />
-          <Button
-            value="."
-            handleClick={this.handleClick}
-          />
-          <Button
-            value="="
-            handleClick={this.handleClick}
-          />
-        </div>
+  return (
+    <div className="calcContainer">
+      <Output result={disp} />
+      <div className="keysGrid">
+        <Button
+          value="AC"
+          handleClick={handleClick}
+        />
+        <Button
+          value="+/-"
+          handleClick={handleClick}
+        />
+        <Button
+          value="%"
+          handleClick={handleClick}
+        />
+        <Button
+          value="÷"
+          handleClick={handleClick}
+        />
+        <Button
+          value="7"
+          handleClick={handleClick}
+        />
+        <Button
+          value="8"
+          handleClick={handleClick}
+        />
+        <Button
+          value="9"
+          handleClick={handleClick}
+        />
+        <Button
+          value="x"
+          handleClick={handleClick}
+        />
+        <Button
+          value="4"
+          handleClick={handleClick}
+        />
+        <Button
+          value="5"
+          handleClick={handleClick}
+        />
+        <Button
+          value="6"
+          handleClick={handleClick}
+        />
+        <Button
+          value="-"
+          handleClick={handleClick}
+        />
+        <Button
+          value="1"
+          handleClick={handleClick}
+        />
+        <Button
+          value="2"
+          handleClick={handleClick}
+        />
+        <Button
+          value="3"
+          handleClick={handleClick}
+        />
+        <Button
+          value="+"
+          handleClick={handleClick}
+        />
+        <Button
+          value="0"
+          handleClick={handleClick}
+        />
+        <Button
+          value="."
+          handleClick={handleClick}
+        />
+        <Button
+          value="="
+          handleClick={handleClick}
+        />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Calculator;
