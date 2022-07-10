@@ -20,7 +20,7 @@ class Button extends React.Component {
     if (value === '0') {
       classes4btn = 'calcBtn span2';
     }
-    if (value === '+' || value === 'x' || value === '-' || value === '=') {
+    if (value === '+' || value === 'x' || value === '-' || value === '=' || value === '÷') {
       classes4btn = 'calcBtn orangeBtn';
     }
     return (
