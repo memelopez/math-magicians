@@ -4,11 +4,12 @@
 
 > Mathematics is cool!
 
-More fun math coming soon!
+Full website consisting of 3 pages: Home, Calculator, and Quote.
 
 ## Built With
 
 - React
+- React Router
 
 ## Live Demo
 
