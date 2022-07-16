@@ -34,6 +34,12 @@ Coming soon!
 - Twitter: [@memelopez10](https://twitter.com/memelopez10)
 - LinkedIn: [Elmer Lopez](https://www.linkedin.com/in/elmer-lopez-51b187200/)
 
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/memelopez/math-magicians/issues).
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
