@@ -13,7 +13,7 @@ Full website consisting of 3 pages: Home, Calculator, and Quote.
 
 ## Live Demo
 
-Coming soon!
+[Click here.](https://clever-paletas-1adfc1.netlify.app/)
 
 
 ## Getting Started
