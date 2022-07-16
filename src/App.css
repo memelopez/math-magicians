@@ -6,11 +6,12 @@
 
 body {
   margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .App {
-  width: 50%;
-  margin: 3em auto 0;
+  width: 100%;
+  margin: 0.35em 1em 0;
 }
 
 .outputContainer {
@@ -47,4 +48,67 @@ body {
 
 .span2 {
   grid-column: span 2;
+}
+
+/* full website */
+
+.main-title {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  margin-right: 3em;
+  font-size: 1.35em;
+  display: flex;
+  align-items: center;
+}
+
+.btw-links {
+  margin: 0 0.5em;
+  font-size: 1.5em;
+}
+
+.actual-subt {
+  font-size: 2em;
+}
+
+.for-lorems {
+  width: 100%;
+  margin-right: 3em;
+  font-size: 1.5em;
+  padding: 0 1em;
+}
+
+.inside-calcP {
+  display: flex;
+  margin-top: 1em;
+}
+
+.right-text {
+  width: 35%;
+}
+
+.actual-calc {
+  width: 60%;
+}
+
+/* quote */
+
+.quote-div {
+  margin-top: 3em;
+  padding: 7em 12em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actual-quote {
+  font-size: 2em;
 }
